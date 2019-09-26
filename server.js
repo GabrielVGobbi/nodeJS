@@ -22,4 +22,4 @@ requireDir('./src/models');
 app.use('/api', require("./src/routes"));
 
 //navegador ouvir, porta 3001
-app.listen(3001);
+app.listen(process.env.PORT || 3001);

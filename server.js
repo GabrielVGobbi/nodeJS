@@ -19,7 +19,7 @@ requireDir('./src/models');
 
 //Rotas
 //receber todo tipo de requisições (get, post, put, delete)
-app.use('/api', require("./src/routes"));
+app.use(require("./src/routes"));
 
 //navegador ouvir, porta 3001
 app.listen(process.env.PORT || 3001);

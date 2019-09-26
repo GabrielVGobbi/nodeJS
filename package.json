@@ -9,8 +9,7 @@
     "start": "node server.js"
   },
   "engines": {
-    "node": "1.17.3",
-    "yarn": "12.3.0"
+    "yarn": "1.14.0"
   },
   "keywords": [],
   "author": "",

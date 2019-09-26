@@ -9,7 +9,12 @@ app.use(express.json());
 app.use(cors());
 
 // Iniciando o DB
-mongoose.connect('mongodb://localhost:27017/ford', { useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect(
+  process.env.MONGO_URL,
+  {
+    useNewUrlParser: true
+  }
+);
 requireDir('./src/models');
 
 //Rotas

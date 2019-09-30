@@ -20,11 +20,11 @@ const ProductSchema = new mongoose.Schema({
         default: Date.now,
     },
     latitude: {
-        type: String,
+        type: Number,
         required: true,
     }, 
     longitude: {
-        type: String,
+        type: Number,
         required: true,
     }, 
     endereco: {

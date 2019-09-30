@@ -19,6 +19,18 @@ const ProductSchema = new mongoose.Schema({
         type: Date, 
         default: Date.now,
     },
+    latitude: {
+        type: String,
+        required: true,
+    }, 
+    longitude: {
+        type: String,
+        required: true,
+    }, 
+    endereco: {
+        type: String,
+        required: true,
+    }, 
 
 });
 

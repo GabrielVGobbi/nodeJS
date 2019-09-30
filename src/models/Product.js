@@ -30,7 +30,11 @@ const ProductSchema = new mongoose.Schema({
     endereco: {
         type: String,
         required: true,
-    }, 
+    },
+    price: {
+        type: String,
+        required: false,
+    } 
 
 });
 

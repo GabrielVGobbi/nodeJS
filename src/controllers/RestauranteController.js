@@ -20,10 +20,9 @@ module.exports = {
     },
 
     async search(req, res){
-        const { tipo = '' } = req.query;
+        const { tipo } = req.body;
 
-        const restaurante = await Restaurante.find({ $where: function() {
-            return (this.title == req.query)
+        const restaurante = await Restaurante.find({ tipo
         
         }});
 

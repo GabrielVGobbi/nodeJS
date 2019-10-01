@@ -22,7 +22,7 @@ routes.delete('/user/delete/:id', UserController.destroy );
 
 const RestauranteController = require('./controllers/RestauranteController');
 routes.get('/restaurante', RestauranteController.index );
-routes.get('/restaurante/search/:tipo', RestauranteController.search );
+routes.get('/restaurante/search', RestauranteController.search );
 routes.get('/restaurante/:id', RestauranteController.show );
 routes.post('/restaurante/add', RestauranteController.store );
 routes.put('/restaurante/edit/:id', RestauranteController.update );

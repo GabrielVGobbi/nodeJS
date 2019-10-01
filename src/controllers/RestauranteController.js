@@ -20,7 +20,7 @@ module.exports = {
     },
 
     async search(req, res){
-        const { tipo } = req.query;
+        const { tipo = '' } = req.query;
 
         const restaurante = await Restaurante.find({ title: { tipo} });
     

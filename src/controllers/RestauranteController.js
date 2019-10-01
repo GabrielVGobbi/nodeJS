@@ -14,8 +14,10 @@ module.exports = {
     },
 
     async show(req, res){
+        const { tipo = '' } = req.query;
+
         const restaurante = await Restaurante.findById(req.params.id,{ $where: function() {
-            return (this.title == "Temakeria e Picanharia Lins")
+            return (this.title == req.query)
         
         }});
 

@@ -34,7 +34,12 @@ const RestauranteSchema = new mongoose.Schema({
     points: {
         type: String,
         required: false,
-    } 
+    }, 
+    points: {
+        type: String,
+        required: false,
+    }, 
+
 
 });
 

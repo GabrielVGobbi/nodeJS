@@ -42,6 +42,14 @@ const ProductSchema = new mongoose.Schema({
     tipo: {
         type: String,
         required: false,
+    },
+    resgate: {
+        type: String,
+        required: false,
+    },
+    price_resgate: {
+        type: String,
+        required: false,
     }
 
 

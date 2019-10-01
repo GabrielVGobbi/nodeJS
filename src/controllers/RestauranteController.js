@@ -14,9 +14,15 @@ module.exports = {
     },
 
     async show(req, res){
+        const restaurante = await Restaurante.findById(req.params.id);
+
+        return res.json(restaurante);
+    },
+
+    async search(req, res){
         const { tipo = '' } = req.query;
 
-        const restaurante = await Restaurante.findById(req.params.id,{ $where: function() {
+        const restaurante = await Restaurante.find({ $where: function() {
             return (this.title == req.query)
         
         }});

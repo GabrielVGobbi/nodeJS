@@ -20,12 +20,5 @@ routes.post('/user/add', UserController.store );
 routes.put('/user/edit/:id', UserController.update );
 routes.delete('/user/delete/:id', UserController.destroy );
 
-const RestauranteController = require('./controllers/RestauranteController');
-routes.get('/restaurante', RestauranteController.index );
-routes.get('/restaurante/search', RestauranteController.search );
-routes.get('/restaurante/:id', RestauranteController.show );
-routes.post('/restaurante/add', RestauranteController.store );
-routes.put('/restaurante/edit/:id', RestauranteController.update );
-routes.delete('/restaurante/delete/:id', RestauranteController.destroy );
 
 module.exports = routes;

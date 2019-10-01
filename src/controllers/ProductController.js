@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const Product = mongoose.model('Product');
 
 module.exports = {
+    
+
     async index(req, res){
         const { tipo } = req.query;
 
@@ -12,6 +14,14 @@ module.exports = {
 
         return res.json(products);
     },
+
+    async all(req, res){
+
+        const products = await Product.find();
+
+        return res.json(products);
+    },
+
 
     async show(req, res){
         const product = await Product.findById(req.params.id);

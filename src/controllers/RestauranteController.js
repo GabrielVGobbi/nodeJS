@@ -22,10 +22,8 @@ module.exports = {
     async search(req, res){
         const { tipo } = req.body;
 
-        const restaurante = await Restaurante.find({ tipo
-        
-        }});
-
+        const restaurante = await Restaurante.find({ title: { 'Temakeria' } });
+    
         return res.json(restaurante);
     },
 

@@ -20,9 +20,9 @@ module.exports = {
     },
 
     async search(req, res){
-        const { tipo } = req.body;
+        const { tipo } = req.query;
 
-        const restaurante = await Restaurante.find({ title: { 'Temakeria' } });
+        const restaurante = await Restaurante.find({ title: { tipo} });
     
         return res.json(restaurante);
     },

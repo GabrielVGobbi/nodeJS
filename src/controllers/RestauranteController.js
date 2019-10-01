@@ -22,9 +22,9 @@ module.exports = {
     async search(req, res){
         const { tipo = '' } = req.query;
 
-        const restaurante = await Restaurante.find({ title: { tipo} });
+        const restaurantes = await Restaurante.find({ "title": { tipo} });
     
-        return res.json(restaurante);
+        return res.json(restaurantes);
     },
 
     async update(req, res){

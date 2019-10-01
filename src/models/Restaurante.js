@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const mongoosePaginate = require('mongoose-paginate');
 
 
-const RestauranteSchema = new mongoose.Schema({
+const ProductSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
@@ -31,13 +31,13 @@ const RestauranteSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    points: {
+    price: {
         type: String,
         required: false,
     } 
 
 });
 
-RestauranteSchema.plugin(mongoosePaginate);
+ProductSchema.plugin(mongoosePaginate);
 
-mongoose.model('Restaurante', RestauranteSchema);
+mongoose.model('Product', ProductSchema);
